@@ -29,4 +29,14 @@ The unit is a Raspberry Pi–based MANET (Mobile Ad-Hoc Network) radio built on 
 ## Downloads
 - 📦 Releases (images): **[github.com/OpenMANET/firmware/releases](https://github.com/OpenMANET/firmware/releases)**
 
-Contributions and issues are welcome!
+# PTT Options
+## Recommended: ATAK
+The Android Team Awareness Kit (ATAK), for civilian use, or Android Tactical Assault Kit (also ATAK) for military use - is a suite of software that provides geospatial information and allows user collaboration over geography.
+- Link to information about CivTAK/ATAK: https://www.civtak.org/
+- Link to CivTAK documentation: https://www.civtak.org/documentation/
+- Android Application Download Link: https://play.google.com/store/apps/details?id=com.atakmap.app.civ
+
+## Alternate: Mumble
+Mumble is a free, open source, low latency, high quality voice chat application
+- Link to information about Mumble: https://www.mumble.info/
+
