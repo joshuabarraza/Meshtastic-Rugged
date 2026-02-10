@@ -11,6 +11,7 @@ The unit is a Raspberry Pi–based MANET (Mobile Ad-Hoc Network) radio built on 
 | 5035 | Lithium Ion Battery (10Ah) | 1x |
 | CSH-SGFB-100-UFFR | RF Cable Assy | 1x |
 | _ | MESHTAC Gooseneck Tactical Antenna 915MHz | 1-2x |
+| 109990565 | Wio-WM6108 Wi-Fi HaLow mini-PCIe Module | 1x |
 
 
 # OpenMANET References
