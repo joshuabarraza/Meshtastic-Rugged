@@ -10,8 +10,9 @@ The unit is a Raspberry Pi–based MANET (Mobile Ad-Hoc Network) radio built on 
 | 1457K1601BK | Aluminum Enclosure | 1x |
 | 5035 | Lithium Ion Battery (10Ah) | 1x |
 | CSH-SGFB-100-UFFR | RF Cable Assy | 1x |
-| _ | MESHTAC Gooseneck Tactical Antenna 915MHz | 1-2x |
+| _ | [MESHTAC Gooseneck Tactical Antenna 915MHz](https://store.rokland.com/products/meshtac-gooseneck-tactical-antenna-4-dbi-gain-sma-male-915-mhz-flexible-for-meshtastic-lora?srsltid=AfmBOopdveQo90jxFJhQkgTv-OG2xH585ynMQ31JdaSO8STukaQ22utp) | 1-2x |
 | 109990565 | Wio-WM6108 Wi-Fi HaLow mini-PCIe Module | 1x |
+| B0G3PJ1VNL | [U94 PTT Adapter to Type-C](https://a.co/d/059k1a5k) | 1x |
 
 
 # OpenMANET References
