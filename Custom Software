@@ -1,0 +1,32 @@
+  What's running on the Pi                                                                                                                                                                                        
+                                                                                                                                                                                                                  
+  HaLow Radio (fully working)                                                                                                                                                                                     
+                                                                                                                                                                                                                  
+  - wlan1 — WM6108 802.11ah (HaLow) interface, IBSS mode, SSID halow-mesh, 916.5 MHz / 1 MHz bandwidth (S1G channel 116 → mapped to 5580 MHz)                                                                     
+  - bat0 — batman-adv Layer 2 mesh virtual interface over wlan1, IP 10.0.0.1/24                                                                                                                                   
+  - halow.service — systemd unit that runs at boot, sets up the IBSS join + batman-adv automatically                                                                                                              
+                                                                                                                                                                                                                  
+  IP Routing                                                                                                                                                                                                      
+                                                                                                                                                                                                                  
+  - IPv4 forwarding enabled (/etc/sysctl.d/99-mesh.conf)                                                                                                                                                          
+  - babeld 1.12.1 installed (/etc/babeld.conf, configured for bat0) — but currently not functional (see below)                                                                                                    
+                                                                                                                                                                                                                  
+  LoRa                                                                                                                                                                                                            
+
+  - /dev/spidev0.1 enabled in DTS for the SX1302 slot, sx1302_hal built at ~/sx1302_hal — but no LoRa module is physically installed, so this is inert                                                            
+
+  ---
+  What's NOT working yet
+
+  babeld is installed and starts on boot but fails to attach to bat0 because batman-adv virtual interfaces don't set the IFF_RUNNING kernel flag. babeld requires IFF_UP | IFF_RUNNING and uses IPv6 link-local
+  multicast for its HELLO packets — neither condition is met on bat0.
+
+  The unresolved decision is:
+  - Option A — drop batman-adv, assign IP directly to wlan1, run babeld there (simpler, correct for pure IP mesh)
+  - Option B — keep batman-adv, work around the IFF_RUNNING issue on bat0
+
+  ---
+  Net effect right now
+
+  The Pi can beacon HaLow on 916.5 MHz and will automatically associate with any other node that joins halow-mesh on the same frequency. batman-adv will handle L2 forwarding between nodes. But there's no L3
+  routing protocol (babeld) advertising routes yet, so multi-hop IP routing won't converge until that's resolved.
